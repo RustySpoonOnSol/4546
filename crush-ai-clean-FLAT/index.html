@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Crush AI Key Test</title></head>
+<body>
+  <h1>Crush AI Key Test</h1>
+  <button onclick="testKey()">Test API Key</button>
+  <pre id="response"></pre>
+  <script>
+    async function testKey() {
+      const res = await fetch('/api/testkey');
+      const json = await res.json();
+      document.getElementById('response').textContent = JSON.stringify(json, null, 2);
+    }
+  </script>
+</body>
+</html>
